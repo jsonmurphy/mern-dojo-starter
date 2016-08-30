@@ -1,0 +1,21 @@
+{
+  "name": "mern-dojo-starter",
+  "description": "MERN stack starter for the Dojo toolkit",
+  "main": "server.js",
+  "authors": [
+    "Jason Murphy <json.murphy@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jsonmurphy/mern-dojo-starter",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "^15.3.1"
+  }
+}
