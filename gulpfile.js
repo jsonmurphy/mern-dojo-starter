@@ -16,7 +16,7 @@ gulp.task('set-prod-node-env', function() {
     return process.env.NODE_ENV = 'production';
 });
 
-gulp.task('es6-dev', function() {
+gulp.task('es6', function() {
     return gulp.src([
         'client/*.js', 'client/**/*.js', 'client/**/**/*.js'
     ])
@@ -49,7 +49,9 @@ gulp.task('test', function () {
         })) //custom path to CasperJs
 });
 
-gulp.task('build-dev', ['set-dev-node-env','es6-dev', 'vendor', 'copy']);
+gulp.task('build-dev', ['set-dev-node-env','es6', 'vendor', 'copy']);
+
+gulp.task('build', ['set-prod-node-env','es6', 'vendor', 'copy']);
 
 gulp.task('default', ['build-dev', 'test'], function() {
     gulp.watch(['client/**/*.*'], ['build-dev', 'test']);
